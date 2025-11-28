@@ -1,0 +1,33 @@
+# JOBBOT – Telegram Job Search Bot
+
+JOBBOT es un bot de Telegram escrito en TypeScript que permite buscar ofertas de empleo usando la API de [SerpAPI](https://serpapi.com/) (Google Jobs).  
+Filtra, normaliza y ordena las vacantes antes de enviarlas al usuario.
+
+---
+
+## 🚀 Tecnologías
+
+- Node.js
+- TypeScript
+- Telegram Bot API (`node-telegram-bot-api`)
+- HTTP client: `axios`
+- SerpAPI (motor `google_jobs`)
+- `dotenv` para variables de entorno
+
+---
+
+## 📦 Requisitos
+
+- Node.js 18+ (recomendado)
+- Cuenta en Telegram y un bot creado con **BotFather**
+- Cuenta en [SerpAPI](https://serpapi.com/) y una `api_key`
+
+---
+
+## ⚙️ Configuración de entorno
+
+Crear un archivo `.env` en la raíz del proyecto:
+
+```env
+TELEGRAM_TOKEN=tu_token_de_telegram
+SERPAPI_KEY=tu_api_key_de_serpapi
