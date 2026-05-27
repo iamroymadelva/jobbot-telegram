@@ -1,33 +1,161 @@
-# JOBBOT – Telegram Job Search Bot
+# JobBot Telegram
 
-JOBBOT es un bot de Telegram escrito en TypeScript que permite buscar ofertas de empleo usando la API de [SerpAPI](https://serpapi.com/) (Google Jobs).  
-Filtra, normaliza y ordena las vacantes antes de enviarlas al usuario.
+Telegram-based job search automation bot built with TypeScript and Google Jobs scraping through SerpAPI.
+
+The project was designed to automate job discovery workflows and simplify job search monitoring directly from Telegram.
 
 ---
 
-## 🚀 Tecnologías
+# Features
 
-- Node.js
+- Telegram bot integration
+- Google Jobs search automation
+- Keyword-based job filtering
+- Location-based filtering
+- Salary filtering
+- Urgent job detection
+- User authorization system
+- Owner approval workflow
+- Environment-based configuration
+- TypeScript-based architecture
+
+---
+
+# Tech Stack
+
 - TypeScript
-- Telegram Bot API (`node-telegram-bot-api`)
-- HTTP client: `axios`
-- SerpAPI (motor `google_jobs`)
-- `dotenv` para variables de entorno
+- Node.js
+- Telegram Bot API
+- Telegraf
+- Axios
+- SerpAPI
+- Google Jobs
+- dotenv
 
 ---
 
-## 📦 Requisitos
+# Workflow Overview
 
-- Node.js 18+ (recomendado)
-- Cuenta en Telegram y un bot creado con **BotFather**
-- Cuenta en [SerpAPI](https://serpapi.com/) y una `api_key`
+```text
+Telegram User
+    ↓
+Authorization Validation
+    ↓
+Job Search Request
+    ↓
+Google Jobs via SerpAPI
+    ↓
+Filtering & Parsing
+    ↓
+Urgent Job Detection
+    ↓
+Telegram Response
+```
 
 ---
 
-## ⚙️ Configuración de entorno
+# Main Capabilities
 
-Crear un archivo `.env` en la raíz del proyecto:
+## Job Search Automation
+
+The bot can search for job opportunities using:
+- keywords
+- location filters
+- salary ranges
+
+Example:
+- "quimico farmaceutico"
+- "Bogota, Colombia"
+
+---
+
+## User Authorization System
+
+The bot includes:
+- owner validation
+- pending approvals
+- approved users
+- rejected users
+
+The first configured owner can approve or reject access requests.
+
+---
+
+## Urgent Job Detection
+
+The system attempts to identify urgent hiring opportunities using:
+- title analysis
+- keyword detection
+- description parsing
+
+Examples:
+- urgent
+- contratación inmediata
+- urgently hiring
+
+---
+
+# Environment Variables
+
+Example `.env` configuration:
 
 ```env
-TELEGRAM_TOKEN=tu_token_de_telegram
-SERPAPI_KEY=tu_api_key_de_serpapi
+TELEGRAM_TOKEN=YOUR_TELEGRAM_TOKEN
+SERPAPI_KEY=YOUR_SERPAPI_KEY
+OWNER_ID=YOUR_TELEGRAM_USER_ID
+```
+
+---
+
+# Running the Project
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Run in development mode
+
+```bash
+npm run dev
+```
+
+---
+
+## Build project
+
+```bash
+npm run build
+```
+
+---
+
+## Start production build
+
+```bash
+npm start
+```
+
+---
+
+# Notes
+
+This project was built as part of experimentation around:
+- workflow automation
+- Telegram integrations
+- operational tooling
+- automated information retrieval
+
+---
+
+# Repository Context
+
+Part of my broader interest in:
+- automation workflows
+- operational tooling
+- AI-assisted systems
+- support operations
+- workflow-driven systems
